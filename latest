@@ -1,7 +1,9 @@
+# shellcheck shell=bash # xrc
 
+# author:       Li Junhao           l@x-cmd.com
+# maintainer:   Li Junhao
 
 # Section: main
-
 ___x_cmd_man() {
     case "$1" in
         :*)
@@ -12,11 +14,9 @@ ___x_cmd_man() {
     # TODO: search function
     ___x_cmd_man_run "$@"
 }
-
 # EndSection
 
 # Section: man_run
-
 # Reference: https://github.com/Valloric/dotfiles/blob/master/less/LESS_TERMCAP
 
 # termcap terminfo
@@ -30,7 +30,6 @@ ___x_cmd_man() {
 # se      rmso      stop standout
 # us      smul      start underline
 # ue      rmul      stop underline
-
 ___x_cmd_man_run() {
     LESS_TERMCAP_md="${___X_CMD_THEME_MD:-"$(printf '\e[01;31m')"}" \
     LESS_TERMCAP_me="${___X_CMD_THEME_ME:-"$(printf '\e[0m')"}" \
@@ -44,4 +43,4 @@ ___x_cmd_man_run() {
 
 # EndSection
 
-
+x setmain ___x_cmd_man
