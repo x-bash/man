@@ -3,11 +3,15 @@
 # Section: main
 
 ___x_cmd_man() {
+    case "$1" in
+        :*)
+            x tldr "${1#:}"
+            return
+    esac
+
     # TODO: search function
     ___x_cmd_man_run "$@"
 }
-
-alias man=___x_cmd_man
 
 # EndSection
 
