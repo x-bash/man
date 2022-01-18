@@ -35,8 +35,6 @@ ___x_cmd_man() {
 }
 # EndSection
 
-alias man=___x_cmd_man
-
 # Section: man_run
 # Reference: https://github.com/Valloric/dotfiles/blob/master/less/LESS_TERMCAP
 
