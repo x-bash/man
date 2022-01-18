@@ -9,6 +9,11 @@ ___x_cmd_man() {
         :*)
             x tldr "${1#:}"
             return
+            ;;
+        _x_cmd_advise_json)
+            xrc cat man/lib/___x_cmd_man.json
+            return 126
+            ;;
     esac
 
     # TODO: search function
@@ -40,7 +45,6 @@ ___x_cmd_man_run() {
     GROFF_NO_SGR=1 \
     command man "$@"
 }
-
 # EndSection
 
-x setmain ___x_cmd_man
+xrc setmain ___x_cmd_man
