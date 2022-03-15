@@ -18,7 +18,7 @@ ___x_cmd_man_search_ui(){
     local ___X_CMD_UI_SELECT_FOCUS_ITEM_IDX
     local ___X_CMD_UI_GRIDSELECT_CURRENT_ITEM_INDEX
     local CODE
-    CODE="$(command man -k "$@" | awk -f $___X_CMD_ROOT/man/lib/search.awk)"
+    CODE="$(command man -k "$@" | awk -f "$___X_CMD_ROOT/man/lib/search.awk")"
     while eval "$CODE"; do
         [ "$___X_CMD_UI_GRIDSELECT_FINAL_COMMAND" = "q" ] && break
         eval man "${___X_CMD_UI_GRIDSELECT_CURRENT_ITEM%%\(*}"
