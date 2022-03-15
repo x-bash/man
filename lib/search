@@ -13,7 +13,7 @@ ___x_cmd_man_search_base(){
 }
 
 ___x_cmd_man_search_ui_data(){
-    printf "%s" "$DATA"
+    printf "%s\n" "$DATA"
 }
 
 ___x_cmd_man_search_ui(){
@@ -25,7 +25,7 @@ ___x_cmd_man_search_ui(){
     local DATA
     DATA="$(command man -k "$@" | awk -f "$___X_CMD_ROOT/man/lib/search.awk")"
 
-    while ___x_cmd_ui_gridselect "Search: " ___x_cmd_man_search_ui_data ; do
+    while ___x_cmd_ui_gridselect ___x_cmd_man_search_ui_data ; do
         [ "$___X_CMD_UI_GRIDSELECT_FINAL_COMMAND" = "q" ] && break
         eval man "${___X_CMD_UI_GRIDSELECT_CURRENT_ITEM%%\(*}"
         ___X_CMD_UI_SELECT_FOCUS_ITEM_IDX="$___X_CMD_UI_GRIDSELECT_CURRENT_ITEM_INDEX"
