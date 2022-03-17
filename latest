@@ -16,6 +16,7 @@ ___x_cmd_man() {
         -k|search)
             shift
             ___x_cmd_man_search "$@"
+            return
             ;;
         _x_cmd_advise_json)
             xrc cat man/lib/___x_cmd_man.json
