@@ -57,6 +57,7 @@ ___x_cmd_man() {
 # us      smul      start underline
 # ue      rmul      stop underline
 ___x_cmd_man_run() {
+    echo "$@"
     LESS_TERMCAP_md="${___X_CMD_THEME_MD:-"$(printf '\e[01;31m')"}" \
     LESS_TERMCAP_me="${___X_CMD_THEME_ME:-"$(printf '\e[0m')"}" \
     LESS_TERMCAP_us="${___X_CMD_THEME_US:-"$(printf '\e[01;04;32m')"}" \
