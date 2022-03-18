@@ -33,6 +33,5 @@ ___x_cmd_man_search_ui(){
         ___x_cmd_man_run "$tmppath"
         ___X_CMD_UI_SELECT_FOCUS_ITEM_IDX="$___X_CMD_UI_GRIDSELECT_CURRENT_ITEM_INDEX"
     done
-
 }
 
