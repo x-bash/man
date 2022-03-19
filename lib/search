@@ -29,7 +29,7 @@ ___x_cmd_man_search_ui(){
                 print "break"
                 exit(0)
             }
-            r = index("(", a)
+            r = index(a, "(")
             name = substr(a, 1, r-1)
             section = substr(a, r+1, length(a) - r - 1 )
             gsub(/[ ]*$/, "", name)
