@@ -1,10 +1,10 @@
+xrc ui/lib/gridselect
 
 ___x_cmd_man_search(){
     if ___x_cmd_is_interative_tty; then
         ___x_cmd_man_search_ui "$@"
         return
     fi
-
     command man -k "$@"
 }
 
