@@ -1,7 +1,9 @@
 # Author:       Li Junhao           l@x-cmd.com     # xrc
 # shellcheck    shell=sh
 
-xrc:inner:lib man search
+nner:lib man search
+
+xrc ui/lib/gridselect
 
 # Section: main
 ___x_cmd_man() {
