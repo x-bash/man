@@ -1,7 +1,7 @@
 # Author:       Li Junhao           l@x-cmd.com     # xrc
 # shellcheck    shell=sh
 
-xrc:inner:lib man search
+xrc:mod:lib man ls
 
 xrc ui/lib/gridselect
 
@@ -20,7 +20,7 @@ ___x_cmd_man() {
             ;;
         -k|ls)
             shift
-            ___x_cmd_man_search "$@"
+            ___x_cmd_man_ls "$@"
             return
             ;;
         _x_cmd_advise_json)
