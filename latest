@@ -59,7 +59,7 @@ Usage:
     x man [-k|ls] [ module ]
 
 Example:
-    Show man document for ssh:
+    Show man document for ssh. Show search if it doesn't exists:
         x man ssh
     Show tldr document for ssh:
         x man :ssh
